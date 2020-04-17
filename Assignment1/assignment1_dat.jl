@@ -5,7 +5,7 @@ J = 1:3 # Set of fuels
 crops = ["soy", "sunflower", "cotton"] # for i in I
 fuels  = ["B5", "B30", "B100"] # for j in J
 #Constraints
-area = 160000
+area = 1600
 minFuel = 280000
 water = 5000
 petrol = 150000
@@ -21,5 +21,5 @@ T = [0.2, 0.05, 0] #Part tax of price for j In J
 #Parameters
 V = [0.05, 0.3, 1] #Part vegetable oil per diesel type
 O = Y .* S #Oil content l/he for different crops
-P = B .* (1 .- T) - V * M * U_M - (1 .- V) * R
+P = B .* (1 .- T) - V * M * U_M - (1 .- V) * R #Profit for j in J [€/l]
 W = [5, 4.2, 1] #Water demand for each crop [Ml/ha]
