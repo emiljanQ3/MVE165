@@ -9,4 +9,4 @@ set_optimizer(model, Gurobi.Optimizer)
 optimize!(model)
 
 println("x = ",value.(x.data))
-println("y = ",value.(x.data))
+println("y = ",value.(y.data))
