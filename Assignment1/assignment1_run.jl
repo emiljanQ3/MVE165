@@ -7,3 +7,6 @@ model, x, y = buildBiofuelModel("assignment1_dat.jl")
 
 set_optimizer(model, Gurobi.Optimizer)
 optimize!(model)
+
+println("x = ",value.(x.data))
+println("y = ",value.(x.data))
